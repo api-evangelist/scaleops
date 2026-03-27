@@ -1,0 +1,38 @@
+aid: scaleops
+name: ScaleOps
+description: >-
+  ScaleOps is an autonomous Kubernetes cost optimization platform providing
+  real-time, context-aware resource optimization for containers and clusters.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - FinOps
+  - Kubernetes
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/scaleops/refs/heads/main/apis.yml
+created: '2026-03-27'
+modified: '2026-03-27'
+specificationVersion: '0.19'
+apis:
+  - aid: scaleops:scaleops
+    name: ScaleOps
+    description: >-
+      ScaleOps is an autonomous Kubernetes cost optimization platform providing
+      real-time, context-aware resource optimization for containers and clusters.
+    humanURL: https://scaleops.com/
+    tags:
+      - FinOps
+      - Kubernetes
+    properties:
+      - type: Documentation
+        url: https://docs.scaleops.com/
+      - type: Getting Started
+        url: https://docs.scaleops.com/
+common:
+  - type: Website
+    url: https://scaleops.com/
+  - type: Documentation
+    url: https://docs.scaleops.com/
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
