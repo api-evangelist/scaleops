@@ -1,0 +1,77 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "scaleops": "https://scaleops.com/vocabulary/",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "k8s": "https://kubernetes.io/vocabulary/",
+
+    "ScaleOpsWorkload": {
+      "@id": "scaleops:Workload",
+      "@type": "schema:SoftwareApplication"
+    },
+    "ScaleOpsCluster": {
+      "@id": "scaleops:Cluster",
+      "@type": "schema:SoftwareApplication"
+    },
+    "ScaleOpsOptimization": {
+      "@id": "scaleops:Optimization",
+      "@type": "schema:Action"
+    },
+
+    "name": {
+      "@id": "schema:name",
+      "@type": "xsd:string"
+    },
+    "namespace": {
+      "@id": "k8s:namespace",
+      "@type": "xsd:string"
+    },
+    "kind": {
+      "@id": "k8s:kind",
+      "@type": "xsd:string"
+    },
+    "cluster": {
+      "@id": "scaleops:cluster",
+      "@type": "xsd:string"
+    },
+    "containers": {
+      "@id": "k8s:containers",
+      "@container": "@list"
+    },
+    "replicas": {
+      "@id": "k8s:replicas",
+      "@type": "xsd:integer"
+    },
+    "optimization_status": {
+      "@id": "scaleops:optimizationStatus",
+      "@type": "xsd:string"
+    },
+    "monthly_cost_current": {
+      "@id": "scaleops:monthlyCostCurrent",
+      "@type": "xsd:decimal"
+    },
+    "monthly_cost_optimized": {
+      "@id": "scaleops:monthlyCostOptimized",
+      "@type": "xsd:decimal"
+    },
+    "monthly_savings": {
+      "@id": "scaleops:monthlySavings",
+      "@type": "xsd:decimal"
+    },
+    "requests": {
+      "@id": "k8s:resourceRequests"
+    },
+    "limits": {
+      "@id": "k8s:resourceLimits"
+    },
+    "cpu": {
+      "@id": "k8s:cpu",
+      "@type": "xsd:string"
+    },
+    "memory": {
+      "@id": "k8s:memory",
+      "@type": "xsd:string"
+    }
+  }
+}

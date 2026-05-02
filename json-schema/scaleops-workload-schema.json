@@ -1,0 +1,157 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/scaleops/main/json-schema/scaleops-workload-schema.json",
+  "title": "ScaleOps Workload",
+  "description": "A Kubernetes workload managed by ScaleOps for autonomous resource optimization",
+  "type": "object",
+  "required": ["name", "namespace", "kind"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Workload name (Kubernetes resource name)"
+    },
+    "namespace": {
+      "type": "string",
+      "description": "Kubernetes namespace containing the workload"
+    },
+    "kind": {
+      "type": "string",
+      "enum": ["Deployment", "StatefulSet", "DaemonSet", "Job", "CronJob"],
+      "description": "Kubernetes workload type"
+    },
+    "cluster": {
+      "type": "string",
+      "description": "Kubernetes cluster identifier"
+    },
+    "containers": {
+      "type": "array",
+      "description": "Container configurations within the workload",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Container name"
+          },
+          "current_resources": {
+            "type": "object",
+            "description": "Current resource configuration",
+            "properties": {
+              "requests": {
+                "type": "object",
+                "properties": {
+                  "cpu": {
+                    "type": "string",
+                    "description": "CPU request (e.g., 100m, 0.5)"
+                  },
+                  "memory": {
+                    "type": "string",
+                    "description": "Memory request (e.g., 128Mi, 1Gi)"
+                  }
+                }
+              },
+              "limits": {
+                "type": "object",
+                "properties": {
+                  "cpu": {
+                    "type": "string"
+                  },
+                  "memory": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "recommended_resources": {
+            "type": "object",
+            "description": "ScaleOps recommended resource configuration",
+            "properties": {
+              "requests": {
+                "type": "object",
+                "properties": {
+                  "cpu": {
+                    "type": "string"
+                  },
+                  "memory": {
+                    "type": "string"
+                  }
+                }
+              },
+              "limits": {
+                "type": "object",
+                "properties": {
+                  "cpu": {
+                    "type": "string"
+                  },
+                  "memory": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "actual_usage": {
+            "type": "object",
+            "description": "Observed actual resource usage",
+            "properties": {
+              "cpu_avg": {
+                "type": "string",
+                "description": "Average CPU usage"
+              },
+              "cpu_p95": {
+                "type": "string",
+                "description": "95th percentile CPU usage"
+              },
+              "memory_avg": {
+                "type": "string"
+              },
+              "memory_p95": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "replicas": {
+      "type": "object",
+      "description": "Replica scaling configuration",
+      "properties": {
+        "current": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "recommended": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "min": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "max": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "optimization_status": {
+      "type": "string",
+      "enum": ["optimized", "pending", "not_applicable", "excluded"],
+      "description": "Current ScaleOps optimization status"
+    },
+    "monthly_cost_current": {
+      "type": "number",
+      "description": "Current estimated monthly cost in USD"
+    },
+    "monthly_cost_optimized": {
+      "type": "number",
+      "description": "Estimated monthly cost after optimization in USD"
+    },
+    "monthly_savings": {
+      "type": "number",
+      "description": "Estimated monthly savings from optimization in USD"
+    }
+  }
+}

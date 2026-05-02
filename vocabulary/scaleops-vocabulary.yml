@@ -1,0 +1,97 @@
+name: ScaleOps
+description: >-
+  Vocabulary for ScaleOps, an autonomous Kubernetes cost optimization and resource
+  management platform providing real-time container resource right-sizing.
+created: '2026-05-02'
+modified: '2026-05-02'
+terms:
+  - term: Autonomous Optimization
+    definition: >-
+      ScaleOps' core capability of continuously and automatically adjusting Kubernetes
+      resource allocations (CPU, memory, replicas) without human intervention, based on
+      actual real-time workload behavior rather than static configuration.
+    tags:
+      - Automation
+      - Core Feature
+
+  - term: Right-Sizing
+    definition: >-
+      The process of matching Kubernetes container resource requests and limits to the
+      actual resource consumption of workloads, eliminating over-provisioning waste
+      and under-provisioning risks.
+    tags:
+      - Cost Optimization
+      - Resource Management
+
+  - term: Resource Request
+    definition: >-
+      A Kubernetes container configuration specifying the minimum CPU and memory guaranteed
+      to a container. ScaleOps automatically adjusts these values based on observed usage.
+    tags:
+      - Kubernetes
+      - Resource Management
+
+  - term: Resource Limit
+    definition: >-
+      A Kubernetes container configuration specifying the maximum CPU and memory a container
+      can consume. ScaleOps manages limits to prevent noisy neighbor effects while minimizing waste.
+    tags:
+      - Kubernetes
+      - Resource Management
+
+  - term: HPA
+    definition: >-
+      Horizontal Pod Autoscaler - Kubernetes mechanism for scaling the number of pod replicas
+      based on observed metrics. ScaleOps integrates with HPA to provide more intelligent
+      replica scaling decisions.
+    tags:
+      - Kubernetes
+      - Scaling
+
+  - term: VPA
+    definition: >-
+      Vertical Pod Autoscaler - Kubernetes mechanism for adjusting individual pod CPU and memory
+      requests. ScaleOps provides a more production-safe alternative to the standard VPA.
+    tags:
+      - Kubernetes
+      - Scaling
+
+  - term: FinOps
+    definition: >-
+      Financial Operations for cloud - the practice of managing and optimizing cloud infrastructure
+      costs. ScaleOps is a FinOps tool focused on Kubernetes compute cost reduction.
+    tags:
+      - FinOps
+      - Cost Management
+
+  - term: Node Utilization
+    definition: >-
+      The percentage of CPU and memory capacity actually being used on a Kubernetes node versus
+      what has been requested/allocated. ScaleOps improves utilization rates to reduce node count.
+    tags:
+      - Cost Optimization
+      - Kubernetes
+
+  - term: Cost Monitoring
+    definition: >-
+      ScaleOps' capability to track, attribute, and report on Kubernetes infrastructure costs
+      with integrations to AWS CUR, GCP Billing Export, and Azure Cost Management.
+    tags:
+      - FinOps
+      - Observability
+
+  - term: Workload
+    definition: >-
+      A Kubernetes application deployment (Deployment, StatefulSet, DaemonSet, Job) that
+      ScaleOps monitors and optimizes for resource efficiency.
+    tags:
+      - Kubernetes
+      - Resource Management
+
+  - term: Namespace
+    definition: >-
+      A Kubernetes namespace providing virtual cluster isolation. ScaleOps operates at the
+      namespace level to manage workload resources within organizational boundaries.
+    tags:
+      - Kubernetes
+      - Organization

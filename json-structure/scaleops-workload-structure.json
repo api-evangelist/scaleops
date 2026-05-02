@@ -1,0 +1,107 @@
+{
+  "name": "ScaleOps Workload",
+  "description": "Structure of a Kubernetes workload managed by ScaleOps for autonomous resource optimization",
+  "fields": [
+    {
+      "name": "name",
+      "type": "string",
+      "description": "Kubernetes resource name",
+      "required": true
+    },
+    {
+      "name": "namespace",
+      "type": "string",
+      "description": "Kubernetes namespace",
+      "required": true
+    },
+    {
+      "name": "kind",
+      "type": "enum",
+      "values": ["Deployment", "StatefulSet", "DaemonSet", "Job", "CronJob"],
+      "required": true
+    },
+    {
+      "name": "cluster",
+      "type": "string",
+      "description": "Cluster identifier"
+    },
+    {
+      "name": "containers",
+      "type": "array",
+      "description": "Container configurations",
+      "itemType": {
+        "name": "Container",
+        "fields": [
+          {"name": "name", "type": "string"},
+          {
+            "name": "current_resources",
+            "type": "object",
+            "fields": [
+              {
+                "name": "requests",
+                "type": "object",
+                "fields": [
+                  {"name": "cpu", "type": "string"},
+                  {"name": "memory", "type": "string"}
+                ]
+              },
+              {
+                "name": "limits",
+                "type": "object",
+                "fields": [
+                  {"name": "cpu", "type": "string"},
+                  {"name": "memory", "type": "string"}
+                ]
+              }
+            ]
+          },
+          {
+            "name": "recommended_resources",
+            "type": "object",
+            "description": "ScaleOps recommended values"
+          },
+          {
+            "name": "actual_usage",
+            "type": "object",
+            "fields": [
+              {"name": "cpu_avg", "type": "string"},
+              {"name": "cpu_p95", "type": "string"},
+              {"name": "memory_avg", "type": "string"},
+              {"name": "memory_p95", "type": "string"}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "replicas",
+      "type": "object",
+      "fields": [
+        {"name": "current", "type": "integer"},
+        {"name": "recommended", "type": "integer"},
+        {"name": "min", "type": "integer"},
+        {"name": "max", "type": "integer"}
+      ]
+    },
+    {
+      "name": "optimization_status",
+      "type": "enum",
+      "values": ["optimized", "pending", "not_applicable", "excluded"]
+    },
+    {
+      "name": "monthly_cost_current",
+      "type": "number",
+      "description": "Current monthly cost (USD)"
+    },
+    {
+      "name": "monthly_cost_optimized",
+      "type": "number",
+      "description": "Optimized monthly cost (USD)"
+    },
+    {
+      "name": "monthly_savings",
+      "type": "number",
+      "description": "Monthly savings from optimization (USD)"
+    }
+  ]
+}
