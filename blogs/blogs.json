@@ -1,0 +1,13 @@
+{
+  "repo": "scaleops",
+  "feeds": [
+    {
+      "source": "https://scaleops.com/blog/",
+      "feed_url": "https://scaleops.com/feed/",
+      "saved": 10,
+      "title": "ScaleOps"
+    }
+  ],
+  "post_count": 10,
+  "fetched": "2026-05-03T23:36:20Z"
+}
