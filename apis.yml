@@ -43,7 +43,7 @@ apis:
     properties:
       - type: Documentation
         url: https://docs.scaleops.com/
-      - type: Getting Started
+      - type: GettingStarted
         url: https://docs.scaleops.com/
       - type: Helm Chart
         url: https://catalog.redhat.com/en/software/container-stacks/detail/66eaefc1fa4fb0aa5f835b90
