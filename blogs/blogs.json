@@ -2,12 +2,20 @@
   "repo": "scaleops",
   "feeds": [
     {
-      "source": "https://scaleops.com/blog/",
+      "source": "https://scaleops.com/feed/",
       "feed_url": "https://scaleops.com/feed/",
-      "title": "ScaleOps",
-      "saved": 7
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://github.com/scaleops-sh",
+      "feed_url": "https://github.com/scaleops-sh",
+      "title": "",
+      "saved": 0,
+      "method": "none"
     }
   ],
-  "post_count": 19,
-  "fetched": "2026-05-17T20:20:35Z"
+  "post_count": 23,
+  "fetched": "2026-06-01T23:35:02Z"
 }
