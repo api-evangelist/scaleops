@@ -35,6 +35,15 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/scaleops.png
 tags:
   - AWS
+  - Microsoft Azure
+  - Cost Optimization
+  - FinOps
+  - GCP
+  - Helm
+  - Kubernetes
+  - Resource Management
+tags_raw:
+  - AWS
   - Azure
   - Cost Optimization
   - FinOps
