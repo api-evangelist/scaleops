@@ -64,66 +64,142 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-ScaleOps is an autonomous Kubernetes cost optimization and resource management platform that continuously manages cloud infrastructure resources in real-time based on actual workload behavior. ScaleOps eliminates the need for manual resource configuration by automatically right-sizing CPU, memory, and replica counts for containers and clusters. The platform integrates natively with AWS, GCP, and Azure cost management tools and is deployed via a single Helm command into Kubernetes clusters.
+ScaleOps is an autonomous Kubernetes cost optimization and resource management platform that continuously manages cloud infrastructure resources in real-time based on actual workload behavior. ScaleOps eliminates the need for manual resource configuration by automatically right-sizing CPU, memory, and replica counts for containers and clusters. The platform integrates natively with AWS, GCP, Azure cost management tools and is deployed via a single Helm command. ScaleOps provides real-time, context-aware optimization for production Kubernetes environments without service disruption.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/scaleops/refs/heads/main/apis.yml)
+**Areas:** AWS · Microsoft Azure · Cost Optimization · FinOps · GCP · Helm · Kubernetes · Resource Management
 
-## Scope
+## ScaleOps on APIs.io
 
-- **Type:** Index
-- **Position:** Consuming
-- **Access:** 3rd-Party
+Everything profiled for ScaleOps is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/scaleops/](https://apis.io/providers/scaleops/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (1)
 
-AWS, Azure, Cost Optimization, FinOps, GCP, Helm, Kubernetes, Resource Management
+- [ScaleOps Platform API](https://apis.io/apis/scaleops/scaleops-platform-api/) — The ScaleOps Platform API provides programmatic access to Kubernetes cost optimization features including workload resource recommendations, real-time…
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-02
-- **Modified:** 2026-05-02
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### MCP servers (1)
 
-### ScaleOps Platform API
-The ScaleOps Platform API provides programmatic access to Kubernetes cost optimization features including workload resource recommendations, real-time optimization controls, cost monitoring, and cluster configuration.
+Model Context Protocol servers that expose the API to agents.
 
-**Human URL:** [https://scaleops.com/](https://scaleops.com/)
+- [scaleops](https://apis.io/servers/scaleops/scaleops/)
 
-#### Tags
-Automation, Cost Monitoring, FinOps, Kubernetes, Resource Optimization, Workloads
+#### JSON Schema (1)
 
-#### Properties
-- [Documentation](https://docs.scaleops.com/)
-- [Getting Started](https://docs.scaleops.com/)
-- [Helm Chart](https://catalog.redhat.com/en/software/container-stacks/detail/66eaefc1fa4fb0aa5f835b90)
+The data models the API reads and writes.
 
-## Schemas
+- [ScaleOps Workload](https://apis.io/schemas/scaleops/scaleops-workload/)
 
-- [json-schema/scaleops-workload-schema.json](json-schema/scaleops-workload-schema.json) — Kubernetes workload optimization schema
+#### JSON Structure (1)
 
-## JSON Structures
+Data models expressed in JSON Structure.
 
-- [json-structure/scaleops-workload-structure.json](json-structure/scaleops-workload-structure.json) — Workload structure documentation
+- [Scaleops Workload Structure](https://apis.io/json-structure/scaleops/scaleops-workload-structure/)
 
-## JSON-LD
+#### JSON-LD (1)
 
-- [json-ld/scaleops-context.jsonld](json-ld/scaleops-context.jsonld) — JSON-LD context mapping ScaleOps vocabulary to schema.org and Kubernetes vocabulary
+Linked-data contexts for the provider's vocabulary.
 
-## Vocabulary
+- [Scaleops Context](https://apis.io/jsonld/scaleops/scaleops-context/)
 
-- [vocabulary/scaleops-vocabulary.yml](vocabulary/scaleops-vocabulary.yml) — ScaleOps terminology and domain vocabulary (11 terms)
+#### Vocabulary (1)
 
-## Common Properties
+The provider's domain terms, defined.
+
+- [ScaleOps Vocabulary](https://apis.io/vocabularies/scaleops/scaleops-vocabulary/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [ScaleOps — jsonschema rules](https://apis.io/rules/scaleops/scaleops-jsonschema-spectral-rules/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Scaleops Domain Security](https://apis.io/security/scaleops/scaleops-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Scaleops Plans Pricing](https://apis.io/plans/scaleops/scaleops-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Scaleops Rate Limits](https://apis.io/rate-limits/scaleops/scaleops-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Scaleops Finops](https://apis.io/finops/scaleops/scaleops-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://scaleops.com/)
 - [Documentation](https://docs.scaleops.com/)
-- [GitHub](https://github.com/scaleops-sh)
+- [Pricing](https://scaleops.com/pricing/)
 - [Blog](https://scaleops.com/blog/)
-- [Cost Monitoring](https://scaleops.com/product/kubernetes-cost-monitoring/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
+**Kin Score 18.9** — emerging · rubric 0.25.0 · scored 2026-10-23
 
-**Email:** kin@apievangelist.com
+| Facet | Score |
+|---|---|
+| Discoverability | 60.0 |
+| Contract quality | 10.7 |
+| Contract governance | 23.5 |
+| Operational transparency | 13.2 |
+| Developer ergonomics | 13.1 |
+| Access clarity | 18.4 |
+
+**Agent readiness 12.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 10.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/scaleops/](https://apis.io/providers/scaleops/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for ScaleOps: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/scaleops/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
